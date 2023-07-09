@@ -33,22 +33,6 @@ public class Cliente {
 
     private String domicilio;
 
-    //BIDIR
     @ManyToMany(mappedBy = "clientes")
-    private Set<Expediente> expedientes; //-
+    private Set<Expediente> expedientes;
 }
-//OnetoOne ->
-//UNIDIR: lado One: joinColumn (nombre atributo); lado ToOne: nada
-//BIDIR: lado One: cascade y JoinColum (nombre atributo)
-// lado toOne: con mappedby (nombre clase)
-
-//OnetoMany->
-//UNIDIR: lado One: cascade y joinColumn (nombre clase); lado toMany: nada
-//BIDIR: lado One: mappedby (nombre clase) y JsonIgnore;
-//lado toMany JoinColumn (nombre atributo)
-
-//ManytoMany->
-//UNIDIR: lado Many: JoinTable(name, joincolumns (nombre clase), inversedJoinColumns (nombre atributo-clase contraria)
-//lado toMany: nada
-//BIDIR: lado Many: JoinTable(name, joinColumns(nombre clase), inverserdjoincolumns (nombre atributo-clase contraria), JsonIgnore
-//lado toMany: mappedby
