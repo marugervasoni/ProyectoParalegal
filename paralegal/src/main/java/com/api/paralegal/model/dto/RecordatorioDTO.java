@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -14,6 +14,6 @@ import java.sql.Date;
 public class RecordatorioDTO {
 
     private Long id;
-    private Date vencimiento;
+    private LocalDate vencimiento;
     private Expediente expediente;
 }

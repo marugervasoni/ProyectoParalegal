@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -19,7 +19,7 @@ public class Recordatorio {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Date vencimiento;
+    private LocalDate vencimiento;
 
     private String descripcion;
 

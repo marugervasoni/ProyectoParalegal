@@ -29,8 +29,8 @@ public class Expediente {
 
     private Integer añoInicio;
 
-    @OneToOne
-    @JoinColumn(name = "id_juzgado", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name="id_juzgado")
     private Juzgado juzgado;
 
     private String infoAdicional;

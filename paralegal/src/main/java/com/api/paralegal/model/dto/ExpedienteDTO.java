@@ -1,11 +1,13 @@
 package com.api.paralegal.model.dto;
 
+import com.api.paralegal.model.Cliente;
 import com.api.paralegal.model.Juzgado;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -19,4 +21,6 @@ public class ExpedienteDTO {
     private String objeto;
     private Integer numExpte;
     private Juzgado juzgado;
+    private Integer añoInicio;
+    private Set<Cliente> clientes;
 }

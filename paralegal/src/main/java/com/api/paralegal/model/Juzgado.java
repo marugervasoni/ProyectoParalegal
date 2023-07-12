@@ -1,10 +1,13 @@
 package com.api.paralegal.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Set;
 
 @Getter
 @Setter
@@ -25,4 +28,8 @@ public class Juzgado {
     private int numero;
 
     private String jurisdicción;
+
+    @OneToMany(mappedBy = "juzgado")
+    @JsonIgnore
+    private Set<Expediente> expedientes;
 }

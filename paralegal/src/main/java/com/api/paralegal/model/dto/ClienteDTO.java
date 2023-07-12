@@ -1,9 +1,14 @@
 package com.api.paralegal.model.dto;
 
+import com.api.paralegal.model.Expediente;
+import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.time.LocalDate;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -15,4 +20,6 @@ public class ClienteDTO {
     private String nombre;
     private String apellido;
     private String dni;
+    private String telefono;
+    private String domicilio;
 }

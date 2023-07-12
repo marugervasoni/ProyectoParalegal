@@ -12,8 +12,8 @@ import lombok.Setter;
 public class JuzgadoDTO {
 
     private Long id;
-
+    private String nombre;
     private int numero;
-
     private String jurisdicción;
+
 }
