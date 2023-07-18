@@ -13,6 +13,7 @@ public class JuzgadoDTO {
 
     private Long id;
     private String nombre;
+    private String materia;
     private int numero;
     private String jurisdicción;
 

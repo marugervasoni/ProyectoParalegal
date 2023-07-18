@@ -21,11 +21,9 @@ public class Audiencia {
 
     private LocalDate fecha;
 
-    private String tipo;
+    private String infoAdicionalAud;
 
     @ManyToOne
     @JoinColumn(name="id_expediente", nullable = false , referencedColumnName = "id")
     private Expediente expediente;
-
-    private Boolean esVirtual;
 }

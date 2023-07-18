@@ -15,5 +15,6 @@ public class RecordatorioDTO {
 
     private Long id;
     private LocalDate vencimiento;
+    private String descripcion;
     private Expediente expediente;
 }

@@ -1,10 +1,7 @@
 package com.api.paralegal.service;
 
-import com.api.paralegal.model.Expediente;
 import com.api.paralegal.model.Recordatorio;
-import com.api.paralegal.model.dto.ExpedienteDTO;
 import com.api.paralegal.model.dto.RecordatorioDTO;
-import com.api.paralegal.repository.IExpedienteRepository;
 import com.api.paralegal.repository.IRecordatorioRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

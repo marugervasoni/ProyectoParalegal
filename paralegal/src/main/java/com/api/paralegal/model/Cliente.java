@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.time.LocalDate;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -32,7 +30,4 @@ public class Cliente {
     private String telefono;
 
     private String domicilio;
-
-    @ManyToMany(mappedBy = "clientes")
-    private Set<Expediente> expedientes;
 }

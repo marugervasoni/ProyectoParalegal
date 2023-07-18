@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -16,11 +14,12 @@ import java.util.Set;
 public class ExpedienteDTO {
 
     private Long id;
-    private List<String> actores;
-    private List<String> demandados;
+    private String actores;
+    private String demandados;
     private String objeto;
     private Integer numExpte;
     private Juzgado juzgado;
+    private String infoAdicionalExpte;
     private Integer añoInicio;
-    private Set<Cliente> clientes;
+    private Cliente cliente;
 }

@@ -23,7 +23,7 @@ public class Recordatorio {
 
     private String descripcion;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_expediente", referencedColumnName = "id")
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "id_expediente", referencedColumnName = "id", nullable = false)
     private Expediente expediente;
 }

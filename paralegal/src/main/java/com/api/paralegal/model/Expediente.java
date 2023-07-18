@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.Set;
+import java.util.List;
 
 @Getter @Setter
 @AllArgsConstructor
@@ -19,9 +19,9 @@ public class Expediente {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Set<String> actores;
+    private String actores;
 
-    private Set<String> demandados;
+    private String demandados;
 
     private String objeto;
 
@@ -29,26 +29,21 @@ public class Expediente {
 
     private Integer añoInicio;
 
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name="id_juzgado")
     private Juzgado juzgado;
 
-    private String infoAdicional;
+    private String infoAdicionalExpte;
 
     @OneToMany(mappedBy = "expediente")
     @JsonIgnore
-    private Set<Audiencia> audiencias;
+    private List<Audiencia> audiencias;
 
-    @ManyToMany
-    @JoinTable(
-            name = "clientes_x_expte",
-            joinColumns = @JoinColumn(name = "id_expediente"),
-            inverseJoinColumns = @JoinColumn(name = "id_cliente")
-    )
-    @JsonIgnore
-    private Set<Cliente> clientes;
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "id_cliente")
+    private Cliente cliente;
 
     @OneToMany(mappedBy = "expediente")
     @JsonIgnore
-    private Set<Recordatorio> recordatorios;
+    private List<Recordatorio> recordatorios;
 }

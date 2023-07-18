@@ -1,6 +1,8 @@
 package com.api.paralegal.service;
 
 import com.api.paralegal.model.dto.JuzgadoDTO;
+
+import java.util.List;
 import java.util.Set;
 
 public interface IJuzgadoService {
